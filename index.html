@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,6 +19,11 @@
       rel="stylesheet"
     />
     <!-- tailwind cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- tailwind custom config -->
     <script>
@@ -141,12 +146,13 @@
       </section>
     </header>
     <!-- offer section -->
-    <section class="w-full my-28">
+    <section class="w-full my-28 flex flex-col items-center gap-14">
       <h1
-        class="text-center text-4xl font-bold font-raleway text-[#030712] mb-10"
+        class="text-center text-4xl font-bold font-raleway text-[#030712] mb-5"
       >
         Best Offers For You
       </h1>
+      <!-- offer card -->
       <div class="flex items-center gap-10 justify-center">
         <!-- 1st offer -->
         <div class="bg-[#FFBF0F] rounded-3xl flex items-center px-10">
@@ -183,6 +189,354 @@
           </div>
         </div>
       </div>
+      <button
+        class="border border-[#1dd100] px-6 py-3 rounded-xl font-raleway font-bold text-[#1dd100] text-center"
+      >
+        See All Offers
+      </button>
+    </section>
+    <!-- ticket section -->
+    <section
+      class="w-full mx-auto my-28 bg-[#f7f8f8] rounded-tl-[88px] rounded-tr-[88px] border-t-2 border-t-[#1dd100] py-32"
+    >
+      <h1
+        class="text-center text-[#030712] font-raleway font-bold text-4xl mb-5"
+      >
+        Johu Paribahan
+      </h1>
+      <p
+        class="text-center text-base text-[#03071299] font-inter w-[60%] mx-auto mb-20"
+      >
+        Yes, you can run unit tests and view the results directly within the
+        app. The integrated testing features allow for a streamlined .
+      </p>
+      <!-- ticket details section -->
+      <div
+        class="w-[90%] mx-auto rounded-3xl bg-white flex items-center justify-betwee"
+      >
+        <!-- 1st side -->
+        <div class="w-full px-10">
+          <!-- seats count sec -->
+          <div class="flex items-center justify-between mb-10 h-full">
+            <div class="flex items-center gap-3">
+              <img
+                src="./assets/icons/bus-logo.svg"
+                alt="bus-logo.svg"
+                class="h-full"
+              />
+              <div>
+                <h1 class="text-[#030712] text-3xl font-bold font-raleway">
+                  Johu Paribahan
+                </h1>
+                <p class="text-[#03071299] font-inter font-medium">
+                  Coach-009-WEB ! AC_Business
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-[#1dd10026] rounded-xl inline-flex items-center gap-3 px-6 py-3"
+            >
+              <img src="./assets/icons/seat-green.svg" alt="seat.svg" />
+              <p class="text-[#1dd100] font-medium font-inter">
+                <span>40</span> Seats Left
+              </p>
+            </div>
+          </div>
+          <!-- destination section -->
+          <div class="bg-[#f7f8f8] rounded-3xl w-full px-10 py-5">
+            <div class="flex items-center justify-between font-raleway">
+              <p class="font-semibold text-[#03071299]">Route</p>
+              <p class="text-[#030712] font-semibold">Dhaka - Sylhet</p>
+            </div>
+            <hr class="border border-dashed border-[#03071233] my-6" />
+            <div class="flex items-center justify-between font-raleway">
+              <p class="font-semibold text-[#03071299]">Departure Time</p>
+              <p class="text-[#030712] font-semibold">9:00 PM</p>
+            </div>
+            <hr class="border border-dashed border-[#03071233] my-6" />
+            <div class="flex items-center justify-between">
+              <button
+                class="bg-[#0307120d] text-[#030712cc] rounded-xl px-6 py-3 font-bold font-inter"
+              >
+                Boarding Point - Laxmipur
+              </button>
+              <button
+                class="bg-[#0307120d] text-[#030712cc] rounded-xl px-6 py-3 font-bold font-inter"
+              >
+                Dropping Point - Bogura
+              </button>
+              <button
+                class="bg-[#0307120d] text-[#030712cc] rounded-xl px-6 py-3 font-bold font-inter"
+              >
+                Est. Time - 11 Hour
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 2nd side -->
+        <div class="flex items-center w-[30%]">
+          <img
+            src="./assets/images/info-devider.png"
+            alt="info-devider.png"
+            class=""
+          />
+          <div class="font-raleway flex flex-col items-center">
+            <img src="./assets/icons/currency.svg" alt="currency.svg" />
+            <h1 class="font-bold text-3xl text-center">550 Taka</h1>
+            <p class="text-[#03071299] text-center">Per Seat</p>
+          </div>
+        </div>
+      </div>
+      <!-- seat details sec -->
+      <section class="w-[90%] mx-auto my-20 bg-white rounded-3xl py-10">
+        <div class="grid grid-cols-[60%_40%] grid-rows-1 items-center">
+          <!-- seat deatils -->
+          <div class="w-full">
+            <div class="px-10">
+              <h1 class="font-raleway font-semibold text-xl">
+                Select Your Seat
+              </h1>
+              <hr class="border border-dashed border-[#03071233] my-10" />
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <img src="./assets/icons/seat-gray.svg" alt="seat-gray.svg" />
+                  <p class="font-medium font-inter text-[#03071280]">
+                    Available
+                  </p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img
+                    src="./assets/icons/seat-green.svg"
+                    alt="seat-green.svg"
+                  />
+                  <p class="font-inter font-medium text-[#1dd100]">Selected</p>
+                </div>
+              </div>
+              <hr class="border border-dashed border-[#03071233] my-10" />
+            </div>
+            <div class="w-full flex justify-end px-10">
+              <button class="bg-[#0307121a] py-3 px-12 rounded-xl mb-5">
+                <img src="./assets/icons/wheel.svg" alt="wheel.svg" />
+              </button>
+            </div>
+            <div class="grid grid-cols-2 grid-rows-1 gap-16 items-center px-10">
+              <!-- FIRST ROW -->
+              <div
+                class="grid grid-cols-[20%_40%_40%] grid-rows-10 items-center justify-center gap-6 font-inter text-[#03071280]"
+              >
+                <p class="text-center font-medium">A</p>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  A1
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  A2
+                </button>
+                <p class="text-center font-medium">B</p>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  B1
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  B2
+                </button>
+                <p class="text-center font-medium">C</p>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  C1
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  C2
+                </button>
+                <p class="text-center font-medium">D</p>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  D1
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  D2
+                </button>
+                <p class="text-center font-medium">E</p>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  E1
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  E2
+                </button>
+                <p class="text-center font-medium">F</p>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  F1
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  F2
+                </button>
+                <p class="text-center font-medium">G</p>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  G1
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  G2
+                </button>
+                <p class="text-center font-medium">H</p>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  H1
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  H2
+                </button>
+                <p class="text-center font-medium">I</p>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  I1
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  I2
+                </button>
+                <p class="text-center font-medium">J</p>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  J1
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  J2
+                </button>
+              </div>
+              <!-- SCND ROW -->
+              <div
+                class="grid grid-cols-2 grid-rows-10 items-center justify-center gap-6 font-inter text-[#03071280]"
+              >
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  A3
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  A4
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  B3
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  B4
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  C3
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  C4
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  D3
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  D4
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  E3
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  E4
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  F3
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  F4
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  G3
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  G4
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  H3
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  H4
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  I3
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  I4
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  J3
+                </button>
+                <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
+                  J4
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- price section -->
+          <div class="w-[90%] mx-auto font-inter">
+            <h1 class="font-raleway font-semibold text-xl">Select Your Seat</h1>
+            <hr class="border border-dashed border-[#03071233] my-5" />
+            <div class="bg-[#f7f8f8] rounded-xl px-8 py-5 my-8">
+              <div class="flex items-center justify-between">
+                <p class="font-inter font-medium text-[#030712]">
+                  Seat
+                  <span class="px-3 py-1 rounded-3xl text-white bg-[#1dd100]"
+                    >0</span
+                  >
+                </p>
+                <p class="font-inter font-medium text-[#030712]">Class</p>
+                <p class="font-inter font-medium text-[#030712]">Price</p>
+              </div>
+              <hr class="border border-[#03071233] my-5" />
+              <div class="flex items-center justify-between">
+                <p class="font-inter font-medium text-[#030712]">
+                  Total Price:
+                </p>
+                <p class="font-inter font-medium text-[#030712]">
+                  BDT <span>0</span>
+                </p>
+              </div>
+              <div
+                class="flex items-center gap-2 bg-white rounded-xl py-3 px-3 my-6"
+              >
+                <input
+                  type="text"
+                  class="bg-transparent w-full h-full focus:outline-none placeholder:text-sm"
+                  placeholder="Have Any Coupon?"
+                />
+                <button
+                  class="bg-[#1dd100] rounded-lg px-4 py-2 text-white font-semibold"
+                >
+                  Apply
+                </button>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="font-inter font-medium text-[#030712]">
+                  Grand Total:
+                </p>
+                <p class="font-inter font-medium text-[#030712]">
+                  BDT <span>0</span>
+                </p>
+              </div>
+            </div>
+            <label for="name">Passenger Name: </label>
+            <input
+              type="text"
+              class="w-full bg-transparent py-3 px-8 rounded-lg border border-[#0307121a] focus:outline-none mb-5 mt-3"
+              placeholder="Enter Your Name"
+            />
+            <label for="name">Passenger Name: </label>
+            <input
+              type="text"
+              class="w-full bg-transparent py-3 px-8 rounded-lg border border-[#0307121a] focus:outline-none mb-5 mt-3"
+              placeholder="Enter Your Name"
+            />
+            <label for="name">Passenger Name: </label>
+            <input
+              type="text"
+              class="w-full bg-transparent py-3 px-8 rounded-lg border border-[#0307121a] focus:outline-none mb-5 mt-3"
+              placeholder="Enter Your Name"
+            />
+            <button class="bg-[#1dd100] text-white w-full py-4 rounded-xl">
+              Next
+            </button>
+            <div class="flex items-center gap-10 justify-center my-2">
+              <p class="underline">Terms and Conditions</p>
+              <p class="underline">Cancellation Policy</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
   </body>
 </html>
