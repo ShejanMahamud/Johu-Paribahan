@@ -574,18 +574,27 @@
               </div>
               <div
                 class="flex items-center gap-2 bg-white rounded-xl py-3 px-3 my-6"
+                id="coupon-sec"
               >
                 <input
                   type="text"
                   class="bg-transparent w-full h-full focus:outline-none placeholder:text-sm"
                   placeholder="Have Any Coupon?"
+                  id="coupon-field"
                 />
                 <button
                   class="bg-[#1dd100] rounded-lg px-4 py-2 text-white font-semibold"
+                  id="apply-coupon"
                 >
                   Apply
                 </button>
               </div>
+              <p
+                id="coupon-error"
+                class="font-bold font-inter text-red-600"
+              ></p>
+
+              <p class="text-end my-5 hidden" id="discounted-price">0</p>
               <div class="flex items-center justify-between">
                 <p class="font-inter font-medium text-[#030712]">
                   Grand Total:
