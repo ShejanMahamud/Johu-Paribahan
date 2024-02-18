@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,56 +48,101 @@
     <header class="w-[90%] mx-auto">
       <!-- navbar menu -->
       <nav class="flex items-center justify-between font-raleway mt-5">
-        <a href="#" class="text-3xl font-bold">Johu Paribahan</a>
-        <ul class="flex items-center gap-10 text-[#030712b3] font-medium">
-          <li>Home</li>
-          <li>About</li>
-          <li>Destination</li>
-          <li>Search</li>
-        </ul>
-        <button
-          class="flex items-center gap-2 border border-[#1dd10066] bg-[#1dd1001a] rounded-xl text-[#1DD100] px-6 py-3 font-bold"
-        >
-          <span>Bus</span>
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4 17C4 17.5304 4.21071 18.0391 4.58579 18.4142C4.96086 18.7893 5.46957 19 6 19C6.53043 19 7.03914 18.7893 7.41421 18.4142C7.78929 18.0391 8 17.5304 8 17M4 17C4 16.4696 4.21071 15.9609 4.58579 15.5858C4.96086 15.2107 5.46957 15 6 15C6.53043 15 7.03914 15.2107 7.41421 15.5858C7.78929 15.9609 8 16.4696 8 17M4 17H2V6C2 5.73478 2.10536 5.48043 2.29289 5.29289C2.48043 5.10536 2.73478 5 3 5H17C18.3261 5 19.5979 5.7375 20.5355 7.05025C21.4732 8.36301 22 10.1435 22 12M8 17H16M16 17C16 17.5304 16.2107 18.0391 16.5858 18.4142C16.9609 18.7893 17.4696 19 18 19C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17M16 17C16 16.4696 16.2107 15.9609 16.5858 15.5858C16.9609 15.2107 17.4696 15 18 15C18.5304 15 19.0391 15.2107 19.4142 15.5858C19.7893 15.9609 20 16.4696 20 17M20 17H22V12M22 12H17.5L16 5M2 10H17M7 5V10M12 5V10"
-              stroke="#1DD100"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li>
+                  <a>About</a>
+                </li>
+                <li><a>Destination</a></li>
+                <li><a href="">Search</a></li>
+              </ul>
+            </div>
+            <a class="text-[15px] lg:text-3xl font-bold"
+              ><span class="text-[#1dd100]">Johu</span> Paribahan</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li>
+                <a>About</a>
+              </li>
+              <li><a>Destination</a></li>
+              <li><a href="">Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <button
+              class="flex items-center gap-2 border border-[#1dd10066] bg-[#1dd1001a] rounded-xl text-[#1DD100] px-6 py-3 font-bold"
+            >
+              <span>Bus</span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 17C4 17.5304 4.21071 18.0391 4.58579 18.4142C4.96086 18.7893 5.46957 19 6 19C6.53043 19 7.03914 18.7893 7.41421 18.4142C7.78929 18.0391 8 17.5304 8 17M4 17C4 16.4696 4.21071 15.9609 4.58579 15.5858C4.96086 15.2107 5.46957 15 6 15C6.53043 15 7.03914 15.2107 7.41421 15.5858C7.78929 15.9609 8 16.4696 8 17M4 17H2V6C2 5.73478 2.10536 5.48043 2.29289 5.29289C2.48043 5.10536 2.73478 5 3 5H17C18.3261 5 19.5979 5.7375 20.5355 7.05025C21.4732 8.36301 22 10.1435 22 12M8 17H16M16 17C16 17.5304 16.2107 18.0391 16.5858 18.4142C16.9609 18.7893 17.4696 19 18 19C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17M16 17C16 16.4696 16.2107 15.9609 16.5858 15.5858C16.9609 15.2107 17.4696 15 18 15C18.5304 15 19.0391 15.2107 19.4142 15.5858C19.7893 15.9609 20 16.4696 20 17M20 17H22V12M22 12H17.5L16 5M2 10H17M7 5V10M12 5V10"
+                  stroke="#1DD100"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
       </nav>
       <!-- header section -->
       <section class="w-full my-20 relative">
         <div
-          class="bg-header bg-no-repeat bg-cover h-[600px] w-full rounded-[30px] flex flex-col items-center justify-center gap-5"
+          class="bg-header bg-no-repeat bg-cover bg-center h-[600px] w-full rounded-[30px] flex flex-col items-center justify-center gap-5"
         >
           <h1
-            class="text-6xl font-extrabold text-center text-white leading-[86px] font-raleway"
+            class="lg:text-6xl text-3xl font-extrabold text-center text-white lg:leading-[86px] font-raleway"
           >
             End-to-End Travel with <br />
             <span class="text-[#1DD100]">Johu Paribahan</span>
           </h1>
-          <p class="text-white font-medium font-inter text-center w-[50%]">
+          <p
+            class="text-white font-medium font-inter text-center lg:w-[50%] w-[90%]"
+          >
             Yes, you can run unit tests and view the results directly within the
             app. The integrated testing features allow for a streamlined .
           </p>
           <button
             class="bg-[#1dd100] px-8 py-5 text-white font-bold rounded-xl text-lg"
           >
-            Buy Tickets
+            <a href="#tickets">Buy Tickets</a>
           </button>
         </div>
-        <div class="flex items-center gap-10 -mt-16 justify-center">
+        <div
+          class="flex items-center gap-10 lg:-mt-16 justify-center lg:flex-row flex-col mt-10"
+        >
           <!-- 1st info -->
           <div
             class="flex bg-white items-center gap-3 py-8 px-12 rounded-3xl border-b-[3px] border-b-[#1dd100]"
@@ -146,20 +191,28 @@
       </section>
     </header>
     <!-- offer section -->
-    <section class="w-full my-28 flex flex-col items-center gap-14">
+    <section class="w-full my-32 flex flex-col items-center gap-14">
       <h1
         class="text-center text-4xl font-bold font-raleway text-[#030712] mb-5"
       >
         Best Offers For You
       </h1>
       <!-- offer card -->
-      <div class="flex items-center gap-10 justify-center">
+      <div
+        class="flex items-center gap-10 justify-center lg:flex-row flex-col w-[90%] mx-auto lg:w-full"
+      >
         <!-- 1st offer -->
         <div class="bg-[#FFBF0F] rounded-3xl flex items-center px-10">
           <div class="font-inter *:mb-2">
-            <h1 class="font-extrabold text-[#030712cc] text-4xl">15% OFF</h1>
-            <p class="text-[#030712cc] font-bold">On your next purchase</p>
-            <p class="text-[#03071280] font-medium">Valid until March 2024</p>
+            <h1 class="font-extrabold text-[#030712cc] lg:text-4xl text-2xl">
+              15% OFF
+            </h1>
+            <p class="text-[#030712cc] font-bold lg:text-base text-sm">
+              On your next purchase
+            </p>
+            <p class="text-[#03071280] font-medium lg:text-base text-xs">
+              Valid until March 2024
+            </p>
           </div>
           <img
             src="./assets/images/cupon-devider.png"
@@ -174,9 +227,15 @@
         <!-- 2nd offer -->
         <div class="bg-[#F78C9C] rounded-3xl flex items-center px-10">
           <div class="font-inter *:mb-2">
-            <h1 class="font-extrabold text-[#030712cc] text-4xl">20% OFF</h1>
-            <p class="text-[#030712cc] font-bold">On your next purchase</p>
-            <p class="text-[#03071280] font-medium">Valid until March 2024</p>
+            <h1 class="font-extrabold text-[#030712cc] lg:text-4xl text-2xl">
+              20% OFF
+            </h1>
+            <p class="text-[#030712cc] font-bold lg:text-base text-sm">
+              On your next purchase
+            </p>
+            <p class="text-[#03071280] font-medium lg:text-base text-xs">
+              Valid until March 2024
+            </p>
           </div>
           <img
             src="./assets/images/cupon-devider.png"
@@ -197,7 +256,8 @@
     </section>
     <!-- ticket section -->
     <section
-      class="w-full mx-auto my-28 bg-[#f7f8f8] rounded-tl-[88px] rounded-tr-[88px] border-t-2 border-t-[#1dd100] py-32"
+      class="w-full mx-auto mt-32 bg-[#f7f8f8] rounded-tl-[88px] rounded-tr-[88px] border-t-2 border-t-[#1dd100] pt-32 pb-20"
+      id="tickets"
     >
       <h1
         class="text-center text-[#030712] font-raleway font-bold text-4xl mb-5"
@@ -205,19 +265,21 @@
         Johu Paribahan
       </h1>
       <p
-        class="text-center text-base text-[#03071299] font-inter w-[60%] mx-auto mb-20"
+        class="text-center text-base text-[#03071299] font-inter lg:w-[60%] mx-auto mb-20 w-[90%]"
       >
         Yes, you can run unit tests and view the results directly within the
         app. The integrated testing features allow for a streamlined .
       </p>
       <!-- ticket details section -->
       <div
-        class="w-[90%] mx-auto rounded-3xl bg-white flex items-center justify-betwee"
+        class="w-[90%] mx-auto rounded-3xl bg-white flex items-center justify-between lg:flex-row flex-col py-10 lg:py-0 gap-5"
       >
         <!-- 1st side -->
         <div class="w-full px-10">
           <!-- seats count sec -->
-          <div class="flex items-center justify-between mb-10 h-full">
+          <div
+            class="flex items-center justify-between mb-10 lg:flex-row flex-col"
+          >
             <div class="flex items-center gap-3">
               <img
                 src="./assets/icons/bus-logo.svg"
@@ -225,16 +287,20 @@
                 class="h-full"
               />
               <div>
-                <h1 class="text-[#030712] text-3xl font-bold font-raleway">
+                <h1
+                  class="text-[#030712] lg:text-3xl font-bold font-raleway text-xl"
+                >
                   Johu Paribahan
                 </h1>
-                <p class="text-[#03071299] font-inter font-medium">
+                <p
+                  class="text-[#03071299] font-inter font-medium lg:text-base text-sm"
+                >
                   Coach-009-WEB ! AC_Business
                 </p>
               </div>
             </div>
             <div
-              class="bg-[#1dd10026] rounded-xl inline-flex items-center gap-3 px-6 py-3"
+              class="bg-[#1dd10026] rounded-xl inline-flex items-center gap-3 px-6 py-3 mt-5 lg:mt-0"
             >
               <img src="./assets/icons/seat-green.svg" alt="seat.svg" />
               <p class="text-[#1dd100] font-medium font-inter">
@@ -254,7 +320,9 @@
               <p class="text-[#030712] font-semibold">9:00 PM</p>
             </div>
             <hr class="border border-dashed border-[#03071233] my-6" />
-            <div class="flex items-center justify-between">
+            <div
+              class="flex items-center justify-between lg:flex-row flex-col gap-5 text-sm lg:text-base"
+            >
               <button
                 class="bg-[#0307120d] text-[#030712cc] rounded-xl px-6 py-3 font-bold font-inter"
               >
@@ -278,7 +346,7 @@
           <img
             src="./assets/images/info-devider.png"
             alt="info-devider.png"
-            class=""
+            class="hidden lg:inline-block"
           />
           <div class="font-raleway flex flex-col items-center">
             <img src="./assets/icons/currency.svg" alt="currency.svg" />
@@ -289,7 +357,9 @@
       </div>
       <!-- seat details sec -->
       <section class="w-[90%] mx-auto my-20 bg-white rounded-3xl py-10">
-        <div class="grid grid-cols-[60%_40%] grid-rows-1 items-center">
+        <div
+          class="grid lg:grid-cols-[60%_40%] grid-cols-1 grid-rows-2 lg:grid-rows-1 items-center"
+        >
           <!-- seat deatils -->
           <div class="w-full">
             <div class="px-10">
@@ -467,15 +537,32 @@
             <h1 class="font-raleway font-semibold text-xl">Select Your Seat</h1>
             <hr class="border border-dashed border-[#03071233] my-5" />
             <div class="bg-[#f7f8f8] rounded-xl px-8 py-5 my-8">
-              <div class="flex items-center justify-between">
-                <p class="font-inter font-medium text-[#030712]">
-                  Seat
-                  <span class="px-3 py-1 rounded-3xl text-white bg-[#1dd100]"
-                    >0</span
-                  >
-                </p>
-                <p class="font-inter font-medium text-[#030712]">Class</p>
-                <p class="font-inter font-medium text-[#030712]">Price</p>
+              <div class="overflow-x-auto w-full">
+                <table class="table text-center">
+                  <!-- head -->
+                  <thead>
+                    <tr class="text-[#030712] font-inter font-medium text-base">
+                      <th>
+                        Seat
+                        <span
+                          class="bg-[#1dd100] text-white px-4 py-1 rounded-full"
+                          >0</span
+                        >
+                      </th>
+                      <th>Class</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- row 1 -->
+                    <tr>
+                      <td>C2</td>
+                      <td>Economy</td>
+                      <td>550</td>
+                    </tr>
+                    <!-- row 2 -->
+                  </tbody>
+                </table>
               </div>
               <hr class="border border-[#03071233] my-5" />
               <div class="flex items-center justify-between">
@@ -509,28 +596,36 @@
                 </p>
               </div>
             </div>
-            <label for="name">Passenger Name: </label>
+            <label for="name" class="text-[#030712] font-inter font-bold"
+              >Passenger Name:
+            </label>
             <input
               type="text"
               class="w-full bg-transparent py-3 px-8 rounded-lg border border-[#0307121a] focus:outline-none mb-5 mt-3"
               placeholder="Enter Your Name"
             />
-            <label for="name">Passenger Name: </label>
+            <label for="name" class="text-[#030712] font-inter font-bold"
+              >Phone Number:
+            </label>
             <input
               type="text"
               class="w-full bg-transparent py-3 px-8 rounded-lg border border-[#0307121a] focus:outline-none mb-5 mt-3"
-              placeholder="Enter Your Name"
+              placeholder="Enter Your Phone Number"
             />
-            <label for="name">Passenger Name: </label>
+            <label for="name" class="text-[#030712] font-inter font-bold"
+              >Email ID:
+            </label>
             <input
               type="text"
               class="w-full bg-transparent py-3 px-8 rounded-lg border border-[#0307121a] focus:outline-none mb-5 mt-3"
-              placeholder="Enter Your Name"
+              placeholder="Enter Your Email ID"
             />
             <button class="bg-[#1dd100] text-white w-full py-4 rounded-xl">
               Next
             </button>
-            <div class="flex items-center gap-10 justify-center my-2">
+            <div
+              class="flex items-center gap-10 justify-center my-5 text-[#03071299] font-inter lg:text-base text-sm font-medium"
+            >
               <p class="underline">Terms and Conditions</p>
               <p class="underline">Cancellation Policy</p>
             </div>
@@ -538,5 +633,33 @@
         </div>
       </section>
     </section>
+    <!-- footer section -->
+    <footer
+      class="w-full bg-[#030712] flex flex-col px-20 py-20 text-white font-inter"
+    >
+      <div class="flex items-center justify-between">
+        <div>
+          <h1 class="text-4xl font-bold mb-3">Johu Paribahan</h1>
+          <p class="text-[#ffffffb3] font-medium">
+            P-Ticket is a digital platform to make your daily commuting better.
+          </p>
+        </div>
+        <div>
+          <h1>Download our app</h1>
+          <img src="./assets/images/playstore.svg" alt="playstore.png" />
+        </div>
+      </div>
+      <hr class="border border-[#ffffff4d] border-dashed my-10" />
+      <div class="flex items-center justify-between">
+        <p class="text-[#ffffffb3] font-medium">
+          2024 | All Rights Reserved By Johu Paribahan
+        </p>
+        <ul class="flex items-center gap-5 text-white">
+          <li>Terms and Conditions</li>
+          <li>Return & Refund Policy</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
