@@ -15,6 +15,16 @@ for (const button of seatButtons2){
     });
 }
 
+document.getElementById("next-btn").addEventListener('click', function () {
+    document.getElementById("modal").classList.remove("hidden");
+    document.getElementById("body").classList.add("hidden");
+})
+
+document.getElementById("back").addEventListener('click', function () {
+    document.getElementById("modal").classList.add("hidden");
+    document.getElementById("body").classList.remove("hidden");
+})
+
 function handleSeatClick(btn) {
     if (btn.getAttribute('data-added') === 'true') {
         btn.removeAttribute('data-added');
@@ -36,10 +46,13 @@ function handleSeatClick(btn) {
        const totalPrice = document.getElementById("total-price").innerText = ticketPrice;
        document.getElementById("discounted-price").classList.add("hidden");
        document.getElementById("coupon-sec").classList.remove("hidden");
-       document.getElementById("coupon-error").classList.remove("hidden")
-       document.getElementById("coupon-error").innerText = "To get discount you have to purchase 4 tickets";
+       document.getElementById("coupon-error2").classList.remove("hidden");
+       document.getElementById("coupon-error").classList.add("hidden");
+       document.getElementById("coupon-error2").innerText = "To get discount you have to purchase 4 tickets";
        document.getElementById("apply-coupon").classList.add("bg-gray-700");
        document.getElementById("apply-coupon").setAttribute('disabled','disabled');
+       document.getElementById("next-btn").classList.add("bg-gray-600");
+       document.getElementById("next-btn").setAttribute('disabled','disabled');
     } else if (seatsSelected < 4) {
         btn.setAttribute('data-added', 'true');
         btn.style.backgroundColor = "#1dd100";
@@ -69,14 +82,19 @@ function handleSeatClick(btn) {
         document.getElementById("apply-coupon").setAttribute('disabled','disabled');
         document.getElementById("total-price").innerText = totalPrice;
         document.getElementById("apply-coupon").classList.add("bg-gray-700");
-        
+        document.getElementById("coupon-error2").classList.remove("hidden");
+        document.getElementById("next-btn").setAttribute('disabled','disabled');
+        document.getElementById("next-btn").classList.add("bg-gray-600");
 
     }else{
         discountCalc("NEW15", 15);
         discountCalc("Couple 20", 20);
         document.getElementById("apply-coupon").removeAttribute('disabled');
         document.getElementById("apply-coupon").classList.remove("bg-gray-700");
-        document.getElementById("coupon-error").classList.add("hidden");
+        document.getElementById("coupon-error2").classList.add("hidden");
+        document.getElementById("next-btn").removeAttribute('disabled');
+        document.getElementById("next-btn").classList.remove("bg-gray-600");
+
     }
 
     }
@@ -96,6 +114,7 @@ function discountCalc(couponCode, discount) {
             document.getElementById("coupon-sec").classList.add("hidden");
             document.getElementById("coupon-error").classList.add("hidden");
         } else {
+            document.getElementById("coupon-error").classList.remove("hidden");
             document.getElementById("coupon-error").innerText = "Invalid coupon code";
         }
     });
