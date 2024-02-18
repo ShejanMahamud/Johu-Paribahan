@@ -141,7 +141,7 @@
           </button>
         </div>
         <div
-          class="flex items-center gap-10 lg:-mt-16 justify-center lg:flex-row flex-col mt-10"
+          class="flex items-center gap-10 lg:-mt-16 justify-center lg:flex-row flex-col mt-10 *:shadow-xl"
         >
           <!-- 1st info -->
           <div
@@ -304,7 +304,7 @@
             >
               <img src="./assets/icons/seat-green.svg" alt="seat.svg" />
               <p class="text-[#1dd100] font-medium font-inter">
-                <span>40</span> Seats Left
+                <span id="seat-count">40</span> Seats Left
               </p>
             </div>
           </div>
@@ -392,7 +392,8 @@
             <div class="grid grid-cols-2 grid-rows-1 gap-16 items-center px-10">
               <!-- FIRST ROW -->
               <div
-                class="grid grid-cols-[20%_40%_40%] grid-rows-10 items-center justify-center gap-6 font-inter text-[#03071280]"
+                class="grid grid-cols-[20%_40%_40%] grid-rows-10 items-center justify-center gap-6 font-inter text-[#03071280] *:text-center"
+                id="first-seat-row"
               >
                 <p class="text-center font-medium">A</p>
                 <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
@@ -468,6 +469,7 @@
               <!-- SCND ROW -->
               <div
                 class="grid grid-cols-2 grid-rows-10 items-center justify-center gap-6 font-inter text-[#03071280]"
+                id="second-seat-row"
               >
                 <button class="bg-[#f7f8f8] font-medium px-4 py-3 rounded-xl">
                   A3
@@ -546,6 +548,7 @@
                         Seat
                         <span
                           class="bg-[#1dd100] text-white px-4 py-1 rounded-full"
+                          id="seat-count-2"
                           >0</span
                         >
                       </th>
@@ -553,13 +556,9 @@
                       <th>Price</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="seat-details">
                     <!-- row 1 -->
-                    <tr>
-                      <td>C2</td>
-                      <td>Economy</td>
-                      <td>550</td>
-                    </tr>
+
                     <!-- row 2 -->
                   </tbody>
                 </table>
@@ -570,7 +569,7 @@
                   Total Price:
                 </p>
                 <p class="font-inter font-medium text-[#030712]">
-                  BDT <span>0</span>
+                  BDT <span id="price">0</span>
                 </p>
               </div>
               <div
@@ -592,7 +591,7 @@
                   Grand Total:
                 </p>
                 <p class="font-inter font-medium text-[#030712]">
-                  BDT <span>0</span>
+                  BDT <span id="total-price">0</span>
                 </p>
               </div>
             </div>
@@ -661,5 +660,6 @@
         </ul>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>
