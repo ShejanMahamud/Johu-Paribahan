@@ -35,6 +35,9 @@
               inter: "Inter",
               roboto: "Roboto",
             },
+            color: {
+              primary: "#1dd100",
+            },
             backgroundImage: {
               header:
                 "linear-gradient(180deg, rgba(3, 7, 18, 0.5),rgba(3, 7, 18, 0) 100%), url('./assets/images/banner.png')",
@@ -133,8 +136,8 @@
             <p
               class="text-white font-medium font-inter text-center lg:w-[50%] w-[90%]"
             >
-              Yes, you can run unit tests and view the results directly within
-              the app. The integrated testing features allow for a streamlined .
+              You are you ready to enjoy on a seamless journey from start to
+              finish? Look no further than Johu Paribahan for your travel needs.
             </p>
             <button
               class="bg-[#1dd100] px-8 py-5 text-white font-bold rounded-xl text-lg"
@@ -275,8 +278,8 @@
         <p
           class="text-center text-base text-[#03071299] font-inter lg:w-[60%] mx-auto mb-20 w-[90%]"
         >
-          Yes, you can run unit tests and view the results directly within the
-          app. The integrated testing features allow for a streamlined .
+          Take advantage of our convenient online booking platform to reserve
+          your seat in advance and avoid any last-minute hassles.
         </p>
         <!-- ticket details section -->
         <div
@@ -610,21 +613,78 @@
                     id="coupon-field"
                   />
                   <button
-                    class="bg-[#1dd100] rounded-lg px-4 py-2 text-white font-semibold"
+                    class="bg-gray-400 rounded-lg px-4 py-2 text-white font-semibold"
                     id="apply-coupon"
+                    disabled
                   >
                     Apply
                   </button>
                 </div>
-                <p
+                <div
+                  role="alert"
+                  class="alert alert-error text-white font-bold text-xs mb-2 py-2 hidden w-[60%]"
                   id="coupon-error"
-                  class="font-bold font-inter text-red-600"
-                ></p>
-                <p
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="stroke-current shrink-0 h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Invalid Coupon!</span>
+                </div>
+                <div
+                  role="alert"
+                  class="alert alert-warning text-white font-bold text-xs mb-2 py-2 hidden w-[60%]"
                   id="coupon-error2"
-                  class="font-bold font-inter text-red-600"
-                ></p>
-                <p class="text-end my-5 hidden" id="discounted-price">0</p>
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="stroke-current shrink-0 h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Purchase 4 ticket to get discount!</span>
+                </div>
+                <div
+                  class="inline-flex items-center justify-between w-full my-2"
+                >
+                  <div
+                    role="alert"
+                    class="alert alert-success text-white font-bold text-xs mb-2 py-2 hidden w-[60%]"
+                    id="discount-success"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="stroke-current shrink-0 h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span>Discount Applied!</span>
+                  </div>
+                  <p class="my-5 hidden text-end" id="discounted-price">0</p>
+                </div>
                 <div class="flex items-center justify-between">
                   <p class="font-inter font-medium text-[#030712]">
                     Grand Total:
@@ -634,6 +694,26 @@
                   </p>
                 </div>
               </div>
+              <div
+                role="alert"
+                class="alert alert-warning text-white font-bold text-xs mb-2 py-2 hidden w-[60%]"
+                id="fillup-alert"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="stroke-current shrink-0 h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>Fill Your Details!</span>
+              </div>
               <label for="name" class="text-[#030712] font-inter font-bold"
                 >Passenger Name:
               </label>
@@ -641,6 +721,7 @@
                 type="text"
                 class="w-full bg-transparent py-3 px-8 rounded-lg border border-[#0307121a] focus:outline-none mb-5 mt-3"
                 placeholder="Enter Your Name"
+                required
               />
               <label for="name" class="text-[#030712] font-inter font-bold"
                 >Phone Number:
@@ -650,6 +731,7 @@
                 class="w-full bg-transparent py-3 px-8 rounded-lg border border-[#0307121a] focus:outline-none mb-5 mt-3"
                 placeholder="Enter Your Phone Number"
                 id="phone"
+                required
               />
               <label for="name" class="text-[#030712] font-inter font-bold"
                 >Email ID:
@@ -658,13 +740,54 @@
                 type="text"
                 class="w-full bg-transparent py-3 px-8 rounded-lg border border-[#0307121a] focus:outline-none mb-5 mt-3"
                 placeholder="Enter Your Email ID"
+                required
               />
+
+              <!-- Open the modal using ID.showModal() method -->
               <button
-                class="bg-[#1dd100] text-white w-full py-4 rounded-xl"
+                class="text-white w-full py-4 rounded-xl bg-gray-400"
+                onclick="my_modal_5.showModal()"
                 id="next-btn"
+                disabled
               >
                 Next
               </button>
+              <dialog
+                id="my_modal_5"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <div class="modal-box">
+                  <div
+                    class="w-full mx-auto rounded-2xl bg-white px-10 py-8 flex flex-col items-center gap-5"
+                  >
+                    <img src="./assets/icons/success.svg" alt="success.svg" />
+                    <h1 class="text-[#27ae60] font-bold text-3xl">Success</h1>
+                    <div class="text-center font-medium text-xl text-[#4a4a4a]">
+                      <p>Thank you for Booking Our Bus Seats.</p>
+                      <p class="mb-3">
+                        We are working hard to find the best service and deals
+                        for you.
+                      </p>
+                      <p class="font-light text-lg">
+                        Shortly you will find a confirmation in your email.
+                      </p>
+                    </div>
+                    <button
+                      class="bg-[#27ae60] rounded-full px-20 py-4 text-white text-lg font-medium"
+                      id="back"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+
               <div
                 class="flex items-center gap-10 justify-center my-5 text-[#03071299] font-inter lg:text-base text-xs font-medium"
               >
@@ -684,9 +807,9 @@
         >
           <div>
             <h1 class="text-4xl font-bold mb-3">Johu Paribahan</h1>
-            <p class="text-[#ffffffb3] font-medium">
-              P-Ticket is a digital platform to make your daily commuting
-              better.
+            <p class="text-[#ffffffb3] font-medium lg:w-[50%]">
+              We understand the importance of timeliness. With Johu Paribahan,
+              you can trust that your journey will start and end on schedule.
             </p>
           </div>
           <div>
@@ -709,33 +832,6 @@
         </div>
       </footer>
     </main>
-    <!-- confirmation modal -->
-    <section
-      class="w-full min-h-screen bg-[#f2f1f1] flex items-center justify-center font-roboto hidden"
-      id="modal"
-    >
-      <div
-        class="w-[50%] mx-auto rounded-2xl bg-white px-10 py-10 flex flex-col items-center gap-5"
-      >
-        <img src="./assets/icons/success.svg" alt="success.svg" />
-        <h1 class="text-[#27ae60] font-bold text-3xl">Success</h1>
-        <div class="text-center font-medium text-xl text-[#4a4a4a]">
-          <p>Thank you for Booking Our Bus Seats.</p>
-          <p class="mb-3">
-            We are working hard to find the best service and deals for you.
-          </p>
-          <p class="font-light text-lg">
-            Shortly you will find a confirmation in your email.
-          </p>
-        </div>
-        <button
-          class="bg-[#27ae60] rounded-full px-20 py-4 text-white text-lg font-medium"
-          id="back"
-        >
-          Continue
-        </button>
-      </div>
-    </section>
-    <script src="./js/script.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
