@@ -10,6 +10,10 @@ document.getElementById("back").addEventListener("click", function () {
     window.location.reload();
 })
 
+document.getElementById("close").addEventListener("click", function () {
+    window.location.reload();
+})
+
 for (const button of seatButtons) {
     button.addEventListener("click", function () {
         handleSeatClick(button);
